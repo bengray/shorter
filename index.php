@@ -17,7 +17,7 @@
 
 <body>
 	<div id="form">
-		<h1>Shorter</h1>
+		<h1><a href="/">Shorter</a></h1>
 	    <div class="page">
 	        <div class="field">
 	            <label class="label">Paste your long URL here:</label>
