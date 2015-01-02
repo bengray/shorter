@@ -104,3 +104,34 @@ h1 a {
 	font-size: 16px;
 	margin: 25px 0 0 0;
 }
+@media only screen 
+and (min-width : 320px)
+and (max-width: 667px) {
+	#form {
+	  	top: 30%;
+	  	left: 50%;
+	  	transform: translate(-50%, -30%);
+	  	text-align: center;
+	}
+	h1 {
+		font-size: 74px;
+	    line-height: 35px;
+	}
+	#url {
+		width: 300px;
+		padding: 4px;
+		font-size: 12px;
+	}
+	body {
+	    font-size: 12px;
+	    line-height: 18px;
+	}
+	.page {
+		width: 300px;
+	}
+	.btn {
+		font: bold 12px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+		padding: 6px 0;
+		width: 100px; 
+	}
+}
