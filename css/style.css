@@ -17,11 +17,14 @@ body {
     line-height: 22px;
 }
 #form {
-	position: fixed;
-  	top: 25%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
-  	text-align: center;
+	xposition: fixed;
+  	xtop: 25%;
+  	xleft: 50%;
+  	xtransform: translate(-50%, -50%);
+  	xtext-align: center;
+  	width: 500px;
+  	margin: 0 auto 0;
+  	display: block;
 }
 h1 {
 	font-size: 150px;
@@ -108,10 +111,9 @@ h1 a {
 and (min-width : 320px)
 and (max-width: 667px) {
 	#form {
-	  	top: 30%;
-	  	left: 50%;
-	  	transform: translate(-50%, -30%);
-	  	text-align: center;
+		width: 300px;
+		margin: 0 auto 0;
+		display: block;
 	}
 	h1 {
 		font-size: 74px;
