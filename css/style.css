@@ -17,11 +17,6 @@ body {
     line-height: 22px;
 }
 #form {
-	xposition: fixed;
-  	xtop: 25%;
-  	xleft: 50%;
-  	xtransform: translate(-50%, -50%);
-  	xtext-align: center;
   	width: 500px;
   	margin: 0 auto 0;
   	display: block;
@@ -33,9 +28,6 @@ h1 {
     font-weight: bold;
     text-align: center;
     text-shadow: rgba(0, 0, 0, .2) 3px 3px 3px;
-     
-    /*text stroke
-    -webkit-text-stroke: 3px rgba(0, 0, 0, .6);*/
 }
 h1 a {
 	color: #fff;
