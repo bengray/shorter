@@ -106,6 +106,7 @@ class shorterAPI {
 				// so we can limit the number of times during a 24 hour period they shorten a URL
 				$userLogged = $this->logUser($userIP, $today, $dbo);
 				
+				// Check to see if the submitted URl already exists in the database
 				$URLExists = $this->checkUrlExists($submittedURL, $dbo);
 				
 				if($URLExists) {
@@ -114,14 +115,18 @@ class shorterAPI {
 					
 				} else {
 					
+					// If you're at this point in the code, it's because the URL doesn't exist in the database, add it now
 					$insertLongURL = $dbo->prepare("INSERT INTO urls (submittedURL) VALUES (:submittedURL)");
 					$insertLongURL->execute(array(
 						':submittedURL'	=> $submittedURL
 					));
 					
+					// Grab the id of the URL you just put into the database, we're
+					// going to use the id to create a unique short url
 					$newID = $dbo->lastInsertId();
 					$shortURL = $this->toBase($newID);
 					
+					// Now that we have made the id into a short URL, go back and add it in next to the long URL
 					$insertShortURL = $dbo->prepare('UPDATE urls SET shortURL=:shortURL WHERE id=:newID');
 					$insertShortURL->execute(array(
 						':shortURL' => $shortURL,
@@ -131,7 +136,6 @@ class shorterAPI {
 				
 
 				$rtn['shortURL'] = $shortURL;
-				$rtn['userLogged'] = $userLogged;
 				$rtn['status'] = 'success';
 
 			} else {
