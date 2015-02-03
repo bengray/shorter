@@ -33,7 +33,6 @@
 
 	    <div class="shortURL">&nbsp;</div>
 	</div>
-<div id="date"></div>
 <script type="text/javascript">
 
 // Setting the api location 
@@ -67,7 +66,7 @@ function submit() {
        	}
 	});
 }
-//$("#date").text( (new Date).getFullYear() );	
+	
 </script>
 
 
