@@ -16,6 +16,7 @@
 </head>
 
 <body>
+	
 	<div id="form">
 		<h1><a href="/">Shorter</a></h1>
 	    <div class="page">
@@ -32,7 +33,8 @@
 	    </div>
 
 	    <div class="shortURL">&nbsp;</div>
-	</div>
+	</div> <!-- End form -->
+	
 <script type="text/javascript">
 
 // Setting the api location 

@@ -99,6 +99,12 @@ h1 a {
 	font-size: 16px;
 	margin: 25px 0 0 0;
 }
+
+.g-recaptcha {
+	width: 492px;
+	margin: 15px auto 0;
+	text-align: center;
+}
 @media only screen 
 and (min-width : 320px)
 and (max-width: 667px) {
