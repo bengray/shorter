@@ -13,8 +13,9 @@ $api = new shorterAPI();
 if(!empty($_POST) && $_POST['name'] == 'urlSubmit') {
 	
 	$submittedURL = $_POST['url'];
+	$response = $_POST['captchaResponse'];
 	
-	$api->addURL($submittedURL, $dbo);
+	$api->addURL($submittedURL, $response, $dbo);
 	
 } else {
 	
