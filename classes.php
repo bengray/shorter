@@ -81,9 +81,10 @@ class shorterAPI {
 	}
 	
 	private function captcha($response) {
-		$secret = file_get_contents("http://shorter.bendoylegray.com/recaptcha.txt"); // private key of a two-key process
+		$secretFile = parse_ini_file("/home/protected/secrets.ini"); // private key of a two-key process
+		$googleSecret = $secretFile['secret'];
 		
-		$json = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response");
+		$json = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$googleSecret&response=$response");
 		$decoded = json_decode($json,true);
 		
 		return $decoded['success'];
